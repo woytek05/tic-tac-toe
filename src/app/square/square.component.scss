@@ -1,0 +1,33 @@
+$square-width: 100px;
+$square-height: 100px;
+$square-font-size: 5em;
+$square-border: 3px solid white;
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square {
+    @extend .flex-center;
+    width: $square-width;
+    height: $square-height;
+    box-sizing: border-box;
+    font-size: $square-font-size;
+    font-family: sans-serif;
+    color: white;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+    }
+}
+
+.vertical-line {
+    border-right: $square-border;
+}
+
+.horizontal-line {
+    border-bottom: $square-border;
+}

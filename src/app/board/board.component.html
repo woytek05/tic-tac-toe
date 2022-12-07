@@ -1,0 +1,21 @@
+<div>
+  <div class="status text-center p-4">
+    {{ turn }}
+  </div>
+  <div class="board">
+    <app-square
+      *ngFor="let index of [0, 1, 2, 3, 4, 5, 6, 7, 8]"
+      [index]="index"
+      [square]="board.get(index)!"
+      (click)="click(index)"
+    ></app-square>
+  </div>
+  <div class="pt-2"></div>
+  <button
+    *ngIf="getGameOver"
+    class="btn btn-primary width-100-percent"
+    (click)="createBoard()"
+  >
+    New Game
+  </button>
+</div>

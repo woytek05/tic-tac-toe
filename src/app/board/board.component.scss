@@ -1,0 +1,20 @@
+$row-color: white;
+$status-color: white;
+$status-font-size: 1.4em;
+
+.width-100-percent {
+    width: 100%;
+}
+
+.board {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: $row-color;
+}
+
+.status {
+    color: $status-color;
+    font-size: $status-font-size;
+    font-weight: bold;
+}
